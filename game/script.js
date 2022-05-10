@@ -1,71 +1,65 @@
-let reason=function(choice1,choice2){
+let reason=function(userHand,cpHand){
 
-    if(choice1===choice2){
+    if(userHand===cpHand){
     	return "Because both are equal ";
     }
 
-	else if ( (choice1==="scissors" && choice2==="paper") || (choice2==="scissors" && choice1==="paper")    ){
+	else if ( (userHand==="scissors" && cpHand==="paper") || (cpHand==="scissors" && userHand==="paper")    ){
 		return " Because Scissors cuts Paper ";
 	}
 
-	else if ((choice1==="paper" && choice2==="rock") || (choice2==="paper" && choice1==="rock") ) {
+	else if ((userHand==="paper" && cpHand==="rock") || (cpHand==="paper" && userHand==="rock") ) {
 		return "Because Paper covers Rock";
 	}
-
-	
 	    
-    else if( (choice1==="rock" && choice2==="scissors") || (choice2==="rock" && choice1==="scissors") ){
+    else if( (userHand==="rock" && cpHand==="scissors") || (cpHand==="rock" && userHand==="scissors") ){
 		return "Because Rock crushes Scissors ";
 	}
-
-
 };
 
-let compare= function (choice1 , choice2){
+// function for comparison for choices
+
+let compare= function (userHand , cpHand){
 
 
-	if (choice1===choice2)
+	if (userHand===cpHand)
 		return "Its a tie"
     
-    if (choice1==="rock"){
+    if (userHand==="rock"){
 
-         if (choice2 ==="paper")
+         if (cpHand ==="paper")
+         	return "You lose";
+         else
+         	return "You won";
+ 
+    }
+
+    else if (userHand==="paper"){
+
+         if (cpHand ==="scissors")
          	return "You lose";
          else
          	return "You won";
 
-    
     }
 
-    else if (choice1==="paper"){
+    else if (userHand==="scissors"){
 
-         if (choice2 ==="scissors")
-         	return "You lose";
-         else
-         	return "You won";
-
-
-    }
-
-    else if (choice1==="scissors"){
-
-         if (choice2 ==="rock")
+         if (cpHand ==="rock")
          	return "You lose";
          else
          	return "You won";
     }
        
-
     };
 
-
+// EventListner for Rock
 
 document.getElementById('rock').addEventListener('click', function (e) {
 
 	let userChoice= "rock"
-	//let computerChoice = Math.random();
 	let computerChoice = Math.random();
-	//console.print(computerChoice);
+	
 if (computerChoice <=0.20) {
 	computerChoice = "rock";
 } else if(computerChoice <= 0.40) {
@@ -81,12 +75,13 @@ document.getElementById("p3").innerHTML = reason(userChoice,computerChoice);
 
 });
 
+// EventListener for paper
 
 document.getElementById('paper').addEventListener('click', function (e) {
 	
 	let userChoice= "paper"
 	let computerChoice = Math.random();
-	//console.print(computerChoice);
+	
 if (computerChoice <=0.20) {
 	computerChoice = "rock";
 } else if(computerChoice <= 0.40) {
@@ -103,12 +98,13 @@ document.getElementById("p3").innerHTML = reason(userChoice,computerChoice);
 
 });
 
+// EventListener for scissors
 
 document.getElementById('scissors').addEventListener('click', function (e) {
 	
 	let userChoice= "scissors"
 	let computerChoice = Math.random();
-	//console.print(computerChoice);
+	
 if (computerChoice <=0.20) {
 	computerChoice = "rock";
 } else if(computerChoice <= 0.40) {
