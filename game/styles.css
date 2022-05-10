@@ -1,0 +1,119 @@
+body{
+	
+	background-color: #429895;
+	font-family: monospace;
+	text-align: center;;
+	font-size: 1.5em;
+	position: relative; 
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.score-board {
+	margin: 20px auto;
+	border: 3px solid white;
+	border-radius: 4px;
+	text-align: center;
+	width: 200px;
+	color: white;
+	font-size: 46px;
+	padding: 15px 20px;
+	font-family: sans-serif;
+	position: relative;
+}
+
+.badge {
+	background: blue;
+	color: white;
+	font-size: 14px;
+	padding: 2px 10px;
+	font-family: sans-serif;
+}
+
+#user-label {
+	position: absolute;
+	top:30px;
+	left: -25px;
+}
+
+#computer-label {
+	position: absolute;
+	top: 30px;
+	right: -30px;
+}
+
+h2{
+	font-family: OCR A Std, monospace;
+    color: white;
+	padding-bottom: 30px;
+	background-color: #000000;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.buttons{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+}	
+
+.group{
+	display: flex;
+	flex-direction: column;
+
+}
+
+
+img{
+
+	padding: 20px;
+	height:150px;
+	width: 150px;
+	
+	
+}
+
+/* img:hover{
+transform: scale(1.6);
+transition: all 1s;
+
+} */
+#rock:hover{
+	transform: scale(1.2);
+	transition: all .3s;
+}
+
+#paper:hover{
+	transform: scale(1.2);
+	transition: all .3s;
+}
+
+#scissors:hover{
+	transform: scale(1.2);
+	transition: all .3s;
+}
+
+#spock:hover{
+	transform: scale(1.2);
+	transition: all .3s;
+}
+
+#lizard:hover{
+	transform: scale(1.2);
+	transition: all .3s;
+}
+
+#button{
+	position: absolute;
+	bottom:15%;
+	transition: ;
+}
+
+/* #lizard{
+	position: absolute;
+	bottom:-10%;
+} */
+
