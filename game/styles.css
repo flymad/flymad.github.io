@@ -76,12 +76,12 @@ img{
 	
 }
 
-/* img:hover{
-transform: scale(1.6);
-transition: all 1s;
+img:hover{
+transform: scale(1.2);
+transition: all .2s;
 
-} */
-#rock:hover{
+}
+/* #rock:hover{
 	transform: scale(1.2);
 	transition: all .3s;
 }
@@ -94,26 +94,6 @@ transition: all 1s;
 #scissors:hover{
 	transform: scale(1.2);
 	transition: all .3s;
-}
-
-#spock:hover{
-	transform: scale(1.2);
-	transition: all .3s;
-}
-
-#lizard:hover{
-	transform: scale(1.2);
-	transition: all .3s;
-}
-
-#button{
-	position: absolute;
-	bottom:15%;
-	transition: ;
-}
-
-/* #lizard{
-	position: absolute;
-	bottom:-10%;
 } */
+
 
